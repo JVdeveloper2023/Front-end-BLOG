@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clip-custom {
+    clip-path: polygon(0% 0%, 100% 0.3%, 100% 43%, 100% 100%, 67.2% 100%, 0% 100%, 18.5% 65%, 1% 42.5%, 16.2% 21.3%);
+  }
+}
+/* Styles de barra de dezplamiento*/
+
+::-webkit-scrollbar {
+    width: 3px;
+    
+}
+
+::-webkit-scrollbar-track {
+    background: 'transparent'; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: 'transparent'; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: 'transparent'; 
+}
+
+
+
+/* Styles de la alerta de SweetAlert2*/
+
+/* Estilos para el modo claro */
+
+.swal2-popup {
+  @apply bg-white ;
+}
+
+.swal2-title {
+  @apply text-2xl text-black;
+}
+
+.swal2-content {
+  @apply text-base text-black;
+}
+
+.swal2-confirm {
+  @apply bg-white text-black border-2 border-black !important;
+}
+.swal2-confirm:hover {
+  @apply bg-green-600 text-white border-2 border-black  !important;
+}
+
+.swal2-cancel {
+  @apply bg-white  text-black border-2 border-black !important;
+}
+
+.swal2-cancel:hover{
+ @apply bg-red-600 text-white border-2 border-black !important;
+}
+/* Estilos para el modo oscuro */
+
+
+.dark .swal2-popup {
+  @apply bg-zinc-950  ;
+}
+
+.dark .swal2-title {
+  @apply text-2xl text-white;
+}
+
+.dark .swal2-content {
+  @apply text-base text-gray-300;
+}
+
+.dark .swal2-confirm {
+  @apply bg-white text-black border-2 border-black;
+}
+.dark .swal2-confirm:hover {
+  @apply text-white  bg-green-600 ;
+}
+
+.dark .swal2-cancel {
+  @apply bg-white text-black;
+}
+
+.dark .swal2-cancel:hover{
+@apply text-white bg-red-600
+}
+
+/* estilos del loader*/
+.loader {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #8D8D8D;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
